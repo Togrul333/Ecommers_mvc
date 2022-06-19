@@ -25,7 +25,7 @@
 
             <form action="{{route('basket-add',$product)}}" method="POST">
                 @csrf
-                @if($product->isAvailable())
+                @if($product->isAvailable() && \Illuminate\Support\Facades\Auth::check())
                 <button type="submit" class="btn btn-primary" role="button">В корзину</button>
                 @else
                     <button type="button" class="btn btn-danger" role="button">Нет доступа</button>

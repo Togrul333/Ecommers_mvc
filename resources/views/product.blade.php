@@ -13,7 +13,9 @@
         </form>
     @else
         <button type="button" class="btn btn-danger" role="button">Нет доступа</button>
-        <span> Olanda xeber verilsin?</span>
+        <span> Mehsul movcul oldugu teqdirde size bildiris ede bilerik</span>
+        <br>
+        <span> Bununcun sadece olarag email unvaninizi qeyd edib ok duymesini basin</span>
         <br>
         <br>
 

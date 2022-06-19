@@ -44,8 +44,8 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 @auth
-                    <li @if(\Illuminate\Support\Facades\Route::currentRouteNamed('orders')) class="active" @endif><a
-                            href="{{route('orders')}}">Мои заказы</a></li>
+{{--                    <li @if(\Illuminate\Support\Facades\Route::currentRouteNamed('orders')) class="active" @endif><a--}}
+{{--                            href="{{route('orders')}}">Мои заказы</a></li>--}}
                     <li><a href="{{route('logout')}}">Выйти</a></li>
                     <li><a href="{{route('locale',__('main.set_lang'))}}">@lang('main.set_lang')</a></li>
                 @else

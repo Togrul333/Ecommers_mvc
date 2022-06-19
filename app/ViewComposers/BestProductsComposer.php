@@ -12,11 +12,18 @@ class BestProductsComposer
 {
     public function compose(View $view)
     {
-        $bestProductIds = Order::get()->map->products->flatten()->map->pivot->mapToGroups(function ($pivot) {
-            return [$pivot->product_id => $pivot->count];
-        })->map->sum()->sortByDesc(null)->take(3)->keys()->toArray();
+        // burda butun orderlerin icinde en cox satilan productlarin ucdenesini goturub tapir
 
-        $bestProducts = Product::whereIn('id',$bestProductIds)->get();
+//        $bestProductIds = Order::get()->map->products->flatten()->map->pivot->mapToGroups(function ($pivot) {
+//            return [$pivot->product_id => $pivot->count];
+//        })->map->sum()->sortByDesc(null)->take(3)->keys()->toArray();
+//
+//        $bestProducts = Product::whereIn('id',$bestProductIds)->get();
+
+
+
+         $bestProducts = Product::limit(3)->get();
+
         $view->with('bestProducts', $bestProducts);
 
     }
