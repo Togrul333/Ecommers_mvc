@@ -14,7 +14,7 @@
             @endif
 
         </div>
-        <img src="http://internet-shop.tmweb.ru/storage/products/iphone_x.jpg" alt="iPhone X 64GB">
+        <img src="img/iPhoneX58superretina.jpg" alt="iPhone X 64GB">
 
         <div class="caption">
             <h3>id : {{ $product->id }}</h3>

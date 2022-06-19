@@ -4,7 +4,7 @@
     <h1>{{$product->name}}</h1>
     <h2>{{ $product->category->name }}</h2>
     <p>Цена: <b>{{$product->price}} {{\App\Services\CurrencyConversion::getCurrencySymbol()}}</b></p>
-    <img src="http://internet-shop.tmweb.ru/storage/products/iphone_x_silver.jpg">
+    <img src="{{asset('img/iPhoneX58superretina.jpg')}}" alt="iPhone X 64GB">
     <p>{{$product->__('description')}}</p>
     @if($product->isAvailable())
         <form action="{{route('basket-add',$product->id)}}" method="POST">

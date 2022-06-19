@@ -21,7 +21,7 @@
                             <td>
                                 <a href="{{route('product',[$product->category->code,$product->code])}}">
                                     <img height="56px"
-                                         src="http://internet-shop.tmweb.ru/storage/products/iphone_x.jpg">
+                                         src="{{asset('img/iPhoneX58superretina.jpg')}}">
                                     {{$product->name}}
                                 </a>
                             </td>
